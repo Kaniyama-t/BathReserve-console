@@ -16,8 +16,7 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
-- script:
-    yarn add yarn Build
+- script: |
     yarn install
     yarn build
     pwd
