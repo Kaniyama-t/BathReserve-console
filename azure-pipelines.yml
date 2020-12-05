@@ -4,7 +4,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
 trigger:
-- main
+- test
 
 pool:
   vmImage: 'ubuntu-latest'
@@ -15,19 +15,23 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
-- script: |
-    npm install
-    npm build
-  displayName: 'npm install and build'
+- script: 
+    yarn install
+    yarn build
+  displayName: 'Yarn install and build (generate dist/)'
 
-- task: AzureRmWebAppDeployment@4
+- task: ArchiveFiles@2
   inputs:
-    ConnectionType: 'AzureRM'
-    azureSubscription: 'Azure for Students(bcc318b7-3b03-43a8-b3b4-71ddba8ab0fd)'
-    appType: 'webAppLinux'
-    WebAppName: 'test-bath-reserve-console'
-    deployToSlotOrASE: true
-    ResourceGroupName: 'my_resource'
-    SlotName: 'production'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/dist/*'
-    RuntimeStack: 'NODE|14-lts'
+    rootFolderOrFile: '$(Build.SourcesDirectory)/dist'
+    includeRootFolder: false
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    replaceExistingArchive: true
+
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
+  displayName: 'Publish artifact'
