@@ -18,7 +18,10 @@ steps:
 
 - script:
     yarn add yarn Build
-    npm run build -- --dest dist
+    yarn install
+    yarn build
+    pwd
+    ls
   displayName: 'Yarn install and build (generate dist/)'
 
 - task: ArchiveFiles@2
