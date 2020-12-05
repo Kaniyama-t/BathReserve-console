@@ -17,8 +17,8 @@ steps:
   displayName: 'Install Node.js'
 
 - script:
-    yarn add yarn build
-    yarn build
+    yarn add yarn Build
+    npm run build -- --dest dist
   displayName: 'Yarn install and build (generate dist/)'
 
 - task: ArchiveFiles@2
