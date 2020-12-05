@@ -17,5 +17,17 @@ steps:
 
 - script: |
     npm install
-    npm run build
+    npm build
   displayName: 'npm install and build'
+
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Azure for Students(bcc318b7-3b03-43a8-b3b4-71ddba8ab0fd)'
+    appType: 'webAppLinux'
+    WebAppName: 'test-bath-reserve-console'
+    deployToSlotOrASE: true
+    ResourceGroupName: 'my_resource'
+    SlotName: 'production'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/dist/*'
+    RuntimeStack: 'NODE|14-lts'
