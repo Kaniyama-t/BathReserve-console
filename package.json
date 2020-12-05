@@ -29,6 +29,7 @@
     "sweetalert2": "^9.5.4",
     "vee-validate": "^3.2.1",
     "vue": "^2.6.11",
+    "vue-awesome": "^4.1.0",
     "vue-chartjs": "^3.5.0",
     "vue-clipboard2": "^0.3.0",
     "vue-flatpickr-component": "^8.1.2",
