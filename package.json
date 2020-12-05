@@ -11,6 +11,7 @@
   "dependencies": {
     "bootstrap": "4.3.1",
     "bootstrap-vue": "^2.5.0",
+    "build": "^0.1.4",
     "chart.js": "^2.9.3",
     "d3": "^5.7.0",
     "datamaps": "^0.5.9",
@@ -31,7 +32,8 @@
     "vue-clipboard2": "^0.3.0",
     "vue-flatpickr-component": "^8.1.2",
     "vue-router": "^3.0.6",
-    "vue2-transitions": "^0.2.3"
+    "vue2-transitions": "^0.2.3",
+    "yarn": "^1.22.10"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.7.0",
