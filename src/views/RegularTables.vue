@@ -2,7 +2,7 @@
   <div>
     <base-header class="pb-6 pb-8 pt-5 pt-md-8 bg-gradient-success">
       <!-- Card stats -->
-      <b-row>
+      <!-- <b-row>
         <b-col xl="3" md="6">
           <stats-card title="Total traffic"
                       type="gradient-red"
@@ -56,7 +56,7 @@
             </template>
           </stats-card>
         </b-col>
-      </b-row>
+      </b-row> -->
     </base-header>
     <b-container fluid class="mt--7">
       <b-row>
@@ -64,8 +64,8 @@
           <light-table/>
         </b-col>
       </b-row>
-      <div class="mt-5"></div>
-      <dark-table></dark-table>
+      <!-- <div class="mt-5"></div>
+      <dark-table></dark-table> -->
     </b-container>
   </div>
 </template>

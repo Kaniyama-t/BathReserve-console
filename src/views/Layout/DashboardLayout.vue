@@ -12,7 +12,7 @@
         >
         </sidebar-item>
 
-        <sidebar-item
+        <!-- <sidebar-item
             :link="{
               name: 'Icons',
               path: '/icons',
@@ -27,7 +27,7 @@
                 path: '/maps',
                 icon: 'ni ni-pin-3 text-orange'
               }">
-        </sidebar-item>
+        </sidebar-item> -->
 
         <sidebar-item
               :link="{
@@ -39,13 +39,13 @@
 
         <sidebar-item
                 :link="{
-                  name: 'Tables',
-                  path: '/tables',
+                  name: 'Users List',
+                  path: '/users',
                   icon: 'ni ni-bullet-list-67 text-red'
                 }">
         </sidebar-item>
 
-        <sidebar-item
+        <!-- <sidebar-item
                   :link="{
                     name: 'Login',
                     path: '/login',
@@ -58,7 +58,7 @@
                     path: '/register',
                     icon: 'ni ni-circle-08 text-pink'
                   }">
-        </sidebar-item>
+        </sidebar-item> -->
       </template>
 
       <template slot="links-after">
@@ -69,16 +69,16 @@
           <b-nav-item
                href="https://www.creative-tim.com/learning-lab/bootstrap-vue/quick-start/argon-dashboard"
                >
-              <i class="ni ni-spaceship"></i>
-              <b-nav-text class="p-0">Getting started</b-nav-text>
+              <v-icon name="file-alt"/>
+              <b-nav-text class="p-0">How to Use</b-nav-text>
           </b-nav-item>
-          <b-nav-item href="https://www.creative-tim.com/learning-lab/bootstrap-vue/colors/argon-dashboard">
-              <i class="ni ni-palette"></i>
-              <b-nav-text class="p-0">Foundation</b-nav-text>
+          <b-nav-item href="https://github.com/Kaniyama-t/BathReserve-console/issues">
+              <v-icon name="question-circle"/>
+              <b-nav-text class="p-0">FAQ and Bugs</b-nav-text>
           </b-nav-item>
-          <b-nav-item href="https://www.creative-tim.com/learning-lab/bootstrap-vue/avatar/argon-dashboard">
-              <i class="ni ni-ui-04"></i>
-              <b-nav-text class="p-0">Components</b-nav-text>
+          <b-nav-item href="https://github.com/Kaniyama-t/BathReserve-console/">
+              <v-icon name="github"/>
+              <b-nav-text class="p-0">Source Code</b-nav-text>
           </b-nav-item>
         </b-nav>
       </template>
@@ -97,6 +97,10 @@
   </div>
 </template>
 <script>
+  import Vue from 'vue'
+  import 'vue-awesome/icons'
+  import Icon from 'vue-awesome/components/Icon'
+  Vue.component('v-icon', Icon)
   /* eslint-disable no-new */
   import PerfectScrollbar from 'perfect-scrollbar';
   import 'perfect-scrollbar/css/perfect-scrollbar.css';

@@ -17,24 +17,24 @@ const routes = [
         // which is lazy-loaded when the route is visited.
         component: () => import(/* webpackChunkName: "demo" */ '../views/Dashboard.vue')
       },
-      {
-        path: '/icons',
-        name: 'icons',
-        component: () => import(/* webpackChunkName: "demo" */ '../views/Icons.vue')
-      },
+      // {
+      //   path: '/icons',
+      //   name: 'icons',
+      //   component: () => import(/* webpackChunkName: "demo" */ '../views/Icons.vue')
+      // },
       {
         path: '/profile',
         name: 'profile',
         component: () => import(/* webpackChunkName: "demo" */ '../views/Pages/UserProfile.vue')
       },
+      // {
+      //   path: '/maps',
+      //   name: 'maps',
+      //   component: () => import(/* webpackChunkName: "demo" */ '../views/GoogleMaps.vue')
+      // },
       {
-        path: '/maps',
-        name: 'maps',
-        component: () => import(/* webpackChunkName: "demo" */ '../views/GoogleMaps.vue')
-      },
-      {
-        path: '/tables',
-        name: 'tables',
+        path: '/users',
+        name: 'users',
         component: () => import(/* webpackChunkName: "demo" */ '../views/RegularTables.vue')
       }
     ]
