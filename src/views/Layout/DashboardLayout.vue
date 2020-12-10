@@ -97,6 +97,10 @@
   </div>
 </template>
 <script>
+  import Vue from 'vue'
+  import 'vue-awesome/icons'
+  import Icon from 'vue-awesome/components/Icon'
+  Vue.component('v-icon', Icon)
   /* eslint-disable no-new */
   import PerfectScrollbar from 'perfect-scrollbar';
   import 'perfect-scrollbar/css/perfect-scrollbar.css';

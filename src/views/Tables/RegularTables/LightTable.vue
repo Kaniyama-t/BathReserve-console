@@ -1,10 +1,11 @@
 <template>
     <b-card no-body>
         <b-card-header class="border-0">
-            <h3 class="mb-0">Light table</h3>
+            <h3 class="mb-0">User List</h3>
             <b-form class="navbar-search form-inline mr-sm-3"
                 :class="{'navbar-search-dark': type === 'default', 'navbar-search-light': type === 'light'}"
                 id="table-search-main">
+                <br />
                 <br />
                 <b-input placeholder="Search" class="form-control-alternative"/>
                 <base-button icon type="secondary">
